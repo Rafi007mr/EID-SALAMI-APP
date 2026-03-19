@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://eid-salami-app.onrender.com";
+
 const nextBtn = document.getElementById("nextBtn");
 const salamiForm = document.getElementById("salamiForm");
 const spinBtn = document.getElementById("spinBtn");
@@ -42,7 +44,7 @@ if (salamiForm) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/salami/register", {
+      const response = await fetch(`${API_BASE_URL}/api/salami/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -88,7 +90,7 @@ if (spinBtn && wheel) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/salami/spin", {
+      const response = await fetch(`${API_BASE_URL}/api/salami/spin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -187,7 +189,7 @@ if (adminList) {
 }
 
 function loadUsers(filter = "") {
-  fetch("http://localhost:5000/api/salami/all")
+  fetch(`${API_BASE_URL}/api/salami/all`)
     .then((res) => res.json())
     .then((data) => {
       if (data.success) {
@@ -231,7 +233,7 @@ function loadUsers(filter = "") {
 }
 
 function markPaid(id) {
-  fetch(`http://localhost:5000/api/salami/paid/${id}`, {
+  fetch(`${API_BASE_URL}/api/salami/paid/${id}`, {
     method: "PUT"
   })
     .then((res) => res.json())
