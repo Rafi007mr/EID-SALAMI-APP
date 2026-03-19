@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+if(localStorage.getItem("adminLoggedIn")!=="true"){
+window.location.href="admin-login.html";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card admin-card">
+
+<h1>Admin Dashboard</h1>
+
+<p class="subtitle">Eid Salami User List</p>
+
+<div class="admin-top">
+
+<p>Total Users: <span id="totalUsers">0</span></p>
+
+<button id="logoutBtn">Logout</button>
+
+</div>
+
+<div class="filter-buttons">
+
+<button onclick="loadUsers()">All</button>
+<button onclick="loadUsers('pending')">Pending</button>
+<button onclick="loadUsers('paid')">Paid</button>
+
+</div>
+
+<div id="adminList"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

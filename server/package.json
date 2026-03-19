@@ -1,0 +1,24 @@
+{
+  "name": "eid-salami-server",
+  "version": "1.0.0",
+  "description": "Eid Salami Lottery Web App Backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["nodejs", "express", "mongodb", "eid-salami"],
+  "author": "Rafi",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+  
+}
